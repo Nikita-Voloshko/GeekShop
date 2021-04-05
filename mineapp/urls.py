@@ -1,9 +1,9 @@
 from django.urls import path
 
-from mineapp.views import products
+from mineapp.views import Product, index
 
 app_name = 'mineapp'
 urlpatterns = [
-    path('', products, name='index'),
-    path('<int:id/>', products, name='products')
+    path('', index, name='index'),
+    path('<int:category_id/>', Product, name='products'),
 ]

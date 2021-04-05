@@ -22,10 +22,10 @@ class registerUser(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(registerUser, self).__init__(*args, **kwargs)
-        self.fields['first_name'].widget.attrs['placeholder'] = 'Введите имя пользователя'
-        self.fields['last_name'].widget.attrs['placeholder'] = 'Введите фамилию пользователя'
-        self.fields['username'].widget.attrs['placeholder'] = 'Введите ник пользователя'
-        self.fields['email'].widget.attrs['placeholder'] = 'Введите почту'
+        self.fields['username'].widget.attrs['placeholder'] = 'Введите имя пользователя'
+        self.fields['email'].widget.attrs['placeholder'] = 'Введите адрес эл. почты'
+        self.fields['first_name'].widget.attrs['placeholder'] = 'Введите имя'
+        self.fields['last_name'].widget.attrs['placeholder'] = 'Введите фамилию'
         self.fields['password1'].widget.attrs['placeholder'] = 'Введите пароль'
         self.fields['password2'].widget.attrs['placeholder'] = 'Подтвердите пароль'
         for field_name, field in self.fields.items():
