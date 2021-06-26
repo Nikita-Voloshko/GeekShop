@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-"""from mineapp.views import index, products"""
+"""from mineapp import index, products"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mineapp.urls', namespace="index")),
     path('products/', include('mineapp.urls', namespace="products")),
     path('autharisation/', include('autorisationapp.urls', namespace="auth")),
+    path('basket/', include('basket.urls', namespace="baskets")),
 
 ]
 """ path('products/', products,name="products"),"""
