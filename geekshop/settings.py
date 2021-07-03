@@ -33,10 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mineapp',
-    'autorisationapp',
+    'mainapp',
+    'authapp',
     'basket',
-    'profil',
 
 ]
 
@@ -128,4 +127,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-AUTH_USER_MODEL = 'autorisationapp.user'
+AUTH_USER_MODEL = 'authapp.user'
+
+LOGIN_URL = '/auth/login/'
+

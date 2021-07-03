@@ -1,6 +1,6 @@
 from django.db import models
-from autorisationapp.models import User
-from mineapp.models import Product
+from authapp.models import User
+from mainapp.models import Product
 # Create your models here.
 
 

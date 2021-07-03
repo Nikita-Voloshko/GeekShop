@@ -18,15 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-"""from mineapp import index, products"""
+from mainapp.views import index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mineapp.urls', namespace="index")),
-    path('products/', include('mineapp.urls', namespace="products")),
-    path('autharisation/', include('autorisationapp.urls', namespace="auth")),
+    path('', include('mainapp.urls', namespace='index')),
+    path('products/', include('mainapp.urls', namespace='products')),
+    path('authapp/', include('authapp.urls', namespace="auth")),
     path('basket/', include('basket.urls', namespace="baskets")),
 
 ]
-""" path('products/', products,name="products"),"""
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
